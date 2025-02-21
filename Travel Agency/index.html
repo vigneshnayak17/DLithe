@@ -33,6 +33,10 @@
             color: white;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s; /* Added transition for link color */
+        }
+        nav ul li a:hover {
+            color: #ddd; /* Slightly lighter color on hover */
         }
         section {
             padding: 40px 20px;
@@ -43,7 +47,7 @@
             margin-bottom: 20px;
             border-radius: 10px;
         }
-        .destination, .package {
+      .destination,.package {
             display: inline-block;
             margin: 20px;
             text-align: center;
@@ -51,14 +55,18 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Added transition for scaling */
         }
-        .destination img, .package img {
+      .destination:hover,.package:hover {
+            transform: scale(1.05);
+        }
+      .destination img,.package img {
             width: 250px;
             height: 180px;
             border-radius: 10px;
             transition: transform 0.3s;
         }
-        .destination img:hover, .package img:hover {
+      .destination img:hover,.package img:hover {
             transform: scale(1.05);
         }
         form {
@@ -77,6 +85,11 @@
             width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
+            transition: border-color 0.3s; /* Added transition for border color */
+        }
+        input:focus, textarea:focus {
+            border-color: #00796b; /* Change border color on focus */
+            outline: none; /* Remove default outline */
         }
         button {
             background: #00796b;
@@ -116,7 +129,7 @@
     </header>
     
     <section id="home">
-        <h2>Welcome to Travel India!  </h2>
+        <h2>Welcome to Travel India!</h2>
         <p>Your adventure starts here. Explore breathtaking destinations, discover hidden gems, and create unforgettable memories with us. Let's plan your dream trip today!</p>
     </section>
     
