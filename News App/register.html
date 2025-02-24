@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>News App - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Bharat News  </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Entertainment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="registration-form">
+        <h2>Register for News App</h2>
+        <form action="index.html" method="get">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+            </select>
+
+            <label for="preferences">News Preferences:</label>
+            <select id="preferences" name="preferences[]" multiple required>
+                <option value="business">Business</option>
+                <option value="technology">Technology</option>
+                <option value="sports">Sports</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="politics">Politics</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Bharat News App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
