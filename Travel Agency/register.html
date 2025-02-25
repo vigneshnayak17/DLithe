@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Travel India Agency</title>
-    <link rel="stylesheet" href="styles.css"> <style>
+    <link rel="stylesheet" href="styles.css">
+    <style>
         /* Add any specific styles for the registration page here if needed */
         body {
             font-family: 'Poppins', sans-serif;
@@ -77,6 +78,10 @@
             margin-top: 20px;
             border-radius: 10px 10px 0 0;
         }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +90,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                 <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
                 <li><a href="index.html#packages">Packages</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
@@ -95,7 +100,7 @@
 
     <section id="registration">
         <h2>Register with Travel India</h2>
-        <form action="index.html" method="get">
+        <form id="registrationForm" action="index.html" method="get">
             <label for="reg-name">Name:</label>
             <input type="text" id="reg-name" required>
 
@@ -106,11 +111,49 @@
             <input type="password" id="reg-password" required>
 
             <button type="submit">Register</button>
+            <p id="errorDisplay" class="error-message"></p>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2025 Travel India. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+            const errorDisplay = document.getElementById('errorDisplay');
+
+            errorDisplay.textContent = ''; // Clear previous errors
+
+            if (!name || !email || !password) {
+                errorDisplay.textContent = 'Please fill in all fields.';
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            if (password.length < 6) {
+                errorDisplay.textContent = 'Password must be at least 6 characters long.';
+                event.preventDefault();
+                return;
+            }
+
+            if (!email.includes('@')) {
+                errorDisplay.textContent = 'Invalid email format.';
+                event.preventDefault();
+                return;
+            }
+
+            // Example of a basic arithmetic operation (just for demonstration)
+            let passwordLength = password.length;
+            if(passwordLength % 2 === 0){
+              console.log("Password length is even");
+            } else {
+              console.log("Password length is odd");
+            }
+        });
+    </script>
 </body>
 </html>
