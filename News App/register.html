@@ -56,6 +56,50 @@
             <button type="submit">Register</button>
         </form>
     </div>
+        <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const country = document.getElementById('country').value;
+            const preferences = document.getElementById('preferences').selectedOptions;
+            const errorDisplay = document.getElementById('errorDisplay');
+
+            errorDisplay.textContent = ''; // Clear previous errors
+
+            if (!firstName || !lastName || !email || !password || !confirmPassword || !country || preferences.length === 0) {
+                errorDisplay.textContent = 'Please fill in all fields.';
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorDisplay.textContent = 'Passwords do not match.';
+                event.preventDefault();
+                return;
+            }
+
+            if (password.length < 8) {
+                errorDisplay.textContent = 'Password must be at least 8 characters long.';
+                event.preventDefault();
+                return;
+            }
+
+            if (!email.includes('@')) {
+                errorDisplay.textContent = 'Invalid email format.';
+                event.preventDefault();
+                return;
+            }
+
+            // Example of checking if the user selected a specific preference.
+            let selectedPreferences = Array.from(preferences).map(option => option.value);
+            if (selectedPreferences.includes('sports')) {
+                console.log('User is interested in sports.');
+            }
+        });
+    </script>
     <footer>
         <p>&copy; 2025 Bharat News App. All rights reserved.</p>
     </footer>
