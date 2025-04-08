@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel India Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s; /* Added transition for link color */
+        }
+        nav ul li a:hover {
+            color: #ddd; /* Slightly lighter color on hover */
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+      .destination,.package {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Added transition for scaling */
+        }
+      .destination:hover,.package:hover {
+            transform: scale(1.05);
+        }
+      .destination img,.package img {
+            width: 250px;
+            height: 180px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+      .destination img:hover,.package img:hover {
+            transform: scale(1.05);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s; /* Added transition for border color */
+        }
+        input:focus, textarea:focus {
+            border-color: #00796b; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+        button {
+            background: #00796b;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #005a4f;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        .register-button {
+            background-color: #00796b; /* Example color, match your theme */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel India</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="register.html">Register</a></li> </ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to Travel India!</h2>
+        <p>Your adventure starts here. Explore breathtaking destinations, discover hidden gems, and create unforgettable memories with us. Let's plan your dream trip today!</p>
+    </section>
+    
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination">
+            <img src="images\beaches.jpeg" alt="Beach">
+            <p>Relax at exotic beaches.</p>
+        </div>
+        <div class="destination">
+            <img src="images\mountains.jpeg" alt="Mountains">
+            <p>Explore the scenic mountains.</p>
+        </div>
+        <div class="destination">
+            <img src="images\taj_mahal.jpeg" alt="Taj Mahal">
+            <p>Visit the majestic Taj Mahal.</p>
+        </div>
+        <div class="destination">
+            <img src="images\kerala.jpeg" alt="Kerala">
+            <p>Experience the serene backwaters of Kerala.</p>
+        </div>
+        <div class="destination">
+            <img src="images\jaipur.jpeg" alt="Jaipur">
+            <p>Explore the royal heritage of Jaipur.</p>
+        </div>
+    </section>
+    
+    <section id="packages">
+        <h2>Travel Packages</h2>
+        <div class="package">
+            <img src="images\golden_triangle_package.jpeg" alt="Golden Triangle">
+            <p><strong>Golden Triangle Tour</strong> - Delhi, Agra, Jaipur (4 Days) - ₹25,000</p>
+        </div>
+        <div class="package">
+            <img src="images\kerala_package.jpeg" alt="Kerala">
+            <p><strong>Kerala Backwaters</strong> - Alleppey, Munnar (6 Days) - ₹30,000</p>
+        </div>
+        <div class="package">
+            <img src="images\goa_package.jpeg" alt="Goa">
+            <p><strong>Goa Beach Retreat</strong> - North & South Goa (4 Days) - ₹20,000</p>
+        </div>
+        <div class="package">
+            <img src="images\ladakh_package.jpeg" alt="Ladakh">
+            <p><strong>Ladakh Adventure</strong> - Leh, Nubra Valley (7 Days) - ₹40,000</p>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a leading travel agency providing the best vacation experiences.</p>
+        <p>Email: travelindia@gmail.com</p>
+        <p>Contact No: 8666588842</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section id="register">
+        <h2>Register with us</h2>
+    <a href="register.html" class="register-button">Register</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 Travel India. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

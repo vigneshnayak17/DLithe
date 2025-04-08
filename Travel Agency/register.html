@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Travel India Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any specific styles for the registration page here if needed */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s; /* Added transition for link color */
+        }
+        nav ul li a:hover {
+            color: #ddd; /* Slightly lighter color on hover */
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel India</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="index.html#packages">Packages</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="registration">
+        <h2>Register with Travel India</h2>
+        <form id="registrationForm" action="index.html" method="get">
+            <label for="reg-name">Name:</label>
+            <input type="text" id="reg-name" required>
+
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" required>
+
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" required>
+
+            <button type="submit">Register</button>
+            <p id="errorDisplay" class="error-message"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel India. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+            const errorDisplay = document.getElementById('errorDisplay');
+
+            errorDisplay.textContent = ''; // Clear previous errors
+
+            if (!name || !email || !password) {
+                errorDisplay.textContent = 'Please fill in all fields.';
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            if (password.length < 6) {
+                errorDisplay.textContent = 'Password must be at least 6 characters long.';
+                event.preventDefault();
+                return;
+            }
+
+            if (!email.includes('@')) {
+                errorDisplay.textContent = 'Invalid email format.';
+                event.preventDefault();
+                return;
+            }
+
+            // Example of a basic arithmetic operation (just for demonstration)
+            let passwordLength = password.length;
+            if(passwordLength % 2 === 0){
+              console.log("Password length is even");
+            } else {
+              console.log("Password length is odd");
+            }
+        });
+    </script>
+</body>
+</html>

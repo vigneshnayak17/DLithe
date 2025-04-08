@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vignesh Nayak - Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">  <style>
+            body {
+                font-family: 'Poppins', sans-serif; /* Use Poppins */
+                margin: 0;
+                padding: 0;
+                line-height: 1.7; /* Increased line height */
+                background: linear-gradient(to bottom right, #f0f2f5, #e1eec3); /* Gradient background */
+                color: #333;
+            }
+    
+            header {
+                background: rgba(0, 123, 255, 0.9); /* Semi-transparent blue header */
+                color: white;
+                padding: 30px; /* Increased padding */
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            }
+    
+            h1 {
+                font-size: 3em; /* Larger heading */
+                margin-bottom: 15px; /* Added margin */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow */
+            }
+    
+            nav {
+                background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white nav */
+                padding: 15px;
+                text-align: center;
+                border-bottom: 1px solid #ddd; /* Add a border */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+    
+            nav a {
+                display: inline-block;
+                margin: 0 20px;
+                color: #007bff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: 500; /* Slightly bolder */
+                transition: all 0.3s ease; /* Smooth transition */
+            }
+    
+            nav a:hover {
+                background-color: #0056b3;
+                color: white;
+                transform: translateY(-2px); /* Slight lift on hover */
+            }
+    
+            section {
+                padding: 50px; /* Increased padding */
+                margin: 30px auto; /* Centered sections */
+                max-width: 900px; /* Set a maximum width */
+                background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+                border-radius: 12px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+                transition: transform 0.2s ease; /* Smooth transition */
+            }
+            section:hover {
+                transform: scale(1.02); /* Scale up slightly on hover */
+            }
+    
+            .image-text-container {
+                overflow: hidden;
+                margin-bottom: 40px;
+            }
+    
+            img {
+                max-width: 300px;
+                height: auto;
+                float: left;
+                margin-right: 40px;
+                border-radius: 50%;
+                border: 5px solid #007bff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease; /* Smooth transition */
+            }
+            img:hover {
+                transform: scale(1.1); /* Scale up slightly on hover */
+    
+            }
+    
+            .project {
+                margin-bottom: 40px;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+                transition: transform 0.2s ease;
+                background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque background */
+    
+            }
+            .project:hover {
+                transform: translateY(-8px); /* Move up slightly on hover */
+            }
+    
+            .project h3 {
+                color: #007bff;
+                margin-bottom: 15px;
+            }
+    
+            .project p {
+                margin-bottom: 20px;
+            }
+    
+            .btn { /* ... (button styles from previous response) ... */ }
+    
+            .skills-list { /* ... (skills list styles from previous response) ... */ }
+    
+            footer {
+                background: rgba(0, 123, 255, 0.9); /* Blue footer */
+                color: white;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow on top */
+            }
+    
+            footer a { /* ... (footer link styles from previous response) ... */ }
+    
+            .social-icons {
+                margin-top: 20px;
+            }
+    
+            .social-icons a {
+                display: inline-block;
+                margin: 0 15px;
+                color: white;
+                font-size: 1.8em;
+                transition: color 0.3s ease;
+            }
+    
+            .social-icons a:hover {
+                color: #f0ad4e; /* Gold on hover */
+            }
+    
+            /* Responsive adjustments (example) */
+            @media (max-width: 768px) {
+                /* ... (responsive styles from previous response) ... */
+            }
+        </style>
+    </head>
+<body>
+
+    <header>
+        <h1>Vignesh Nayak</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="image-text-container">
+            <img src="profile.jpg" alt="Your Photo">
+            <p>I'm Vignesh Nayak, a Web Developer & Designer currently pursuing my final year B.E in Information Science and Engineering at Canara Engineering College, Mangalore.  I'm a passionate full-stack developer focused on building scalable and efficient web applications. I'm committed to continuous learning, teamwork, and delivering high-quality solutions that make an impact.  I enjoy exploring new technologies and contributing to innovative projects.</p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li class="skill-item">
+                <i class="fab fa-html5"></i>
+                HTML5
+            </li>
+            <li class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                CSS3
+            </li>
+            <li class="skill-item">
+                <i class="fab fa-js"></i>
+                JavaScript
+            </li>
+            <li class="skill-item">
+                <i class="fab fa-java"></i>
+                Java
+            </li>
+            <li class="skill-item">
+                <i class="fab fa-php"></i>
+                PHP
+            </li>
+            <li class="skill-item">
+                <i class="fas fa-database"></i>
+                MySQL
+            </li>
+            <li class="skill-item">
+                <i class="fas fa-code"></i>
+                Full-Stack Development
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Music Store Management System</h3>
+            <p>Developed a comprehensive database management application to streamline music store operations, including inventory management. Utilized HTML, CSS, JS for the frontend, PHP for the backend, and MySQL for the database.</p>
+        </div>
+
+        <div class="project">
+            <h3>Innovative Placement Portal</h3>
+            <p>Developed a web-based platform to streamline placement processes using PHP, CSS, JavaScript, and MySQL. Key features include role-based secure login, centralized student data management, placement tracking, and recruitment automation.</p>
+        </div>
+        <div class="project">
+            <h3>Segmentation and Analysis of Age-Related Macular Degeneration in OCT Images Using Deep
+                Learning</h3>
+            <p>Working on a U-Net based deep learning pipeline for automated segmentation of retinal layers in OCT images
+                to improve Age-Related Macular Degeneration (AMD) detection.Utilized robust machine learning techniques to reduce labor-intensive labeling.
+                </p>
+        </div>
+
+        </section>
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: vigneshnayak91@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vignesh-nayak" target="_blank">linkedin.com/in/vignesh-nayak</a></p>
+        <p>GitHub: <a href="https://github.com/vigneshnayak17" target="_blank">github.com/vigneshnayak17</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vignesh Nayak. All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/vignesh-nayak" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/vigneshnayak17" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+    </footer>
+
+</body>
+</html>

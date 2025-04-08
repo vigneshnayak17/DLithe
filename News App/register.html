@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>News App - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Bharat News  </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Entertainment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="registration-form">
+        <h2>Register for News App</h2>
+        <form action="index.html" method="get">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+            </select>
+
+            <label for="preferences">News Preferences:</label>
+            <select id="preferences" name="preferences[]" multiple required>
+                <option value="business">Business</option>
+                <option value="technology">Technology</option>
+                <option value="sports">Sports</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="politics">Politics</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+        <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const country = document.getElementById('country').value;
+            const preferences = document.getElementById('preferences').selectedOptions;
+            const errorDisplay = document.getElementById('errorDisplay');
+
+            errorDisplay.textContent = ''; // Clear previous errors
+
+            if (!firstName || !lastName || !email || !password || !confirmPassword || !country || preferences.length === 0) {
+                errorDisplay.textContent = 'Please fill in all fields.';
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorDisplay.textContent = 'Passwords do not match.';
+                event.preventDefault();
+                return;
+            }
+
+            if (password.length < 8) {
+                errorDisplay.textContent = 'Password must be at least 8 characters long.';
+                event.preventDefault();
+                return;
+            }
+
+            if (!email.includes('@')) {
+                errorDisplay.textContent = 'Invalid email format.';
+                event.preventDefault();
+                return;
+            }
+
+            // Example of checking if the user selected a specific preference.
+            let selectedPreferences = Array.from(preferences).map(option => option.value);
+            if (selectedPreferences.includes('sports')) {
+                console.log('User is interested in sports.');
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2025 Bharat News App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
